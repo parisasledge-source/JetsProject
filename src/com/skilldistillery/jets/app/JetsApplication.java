@@ -25,5 +25,4 @@ public class JetsApplication {
 		System.out.println("Jet 1 data: " + jet1Data);
 		System.out.println("Jet 2 data: " + jet2Data);
 	}
-
 }
