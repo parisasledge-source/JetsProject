@@ -14,15 +14,16 @@ public class JetsApplication {
 		jet2.setRange(25);
 		jet2.setPrice(7499999643699L);
 
-		// Have the jets display themselves
-		jet1.fly();
-		jet2.fly();
-
+		//1. List fleet
 		String jet1Data = jet1.toString();
 		String jet2Data = jet2.toString();
-
-		// Get the jets' data and display that
-		System.out.println("Jet 1 data: " + jet1Data);
-		System.out.println("Jet 2 data: " + jet2Data);
+		
+		System.out.println("List of the fleet: ");
+		System.out.println(jet1Data);
+		System.out.println(jet2Data);
+		
+		//2. Fly all jets
+		//jet1.fly();
+		//jet2.fly();
 	}
 }

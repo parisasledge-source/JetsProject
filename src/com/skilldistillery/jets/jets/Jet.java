@@ -55,10 +55,11 @@ public class Jet {
 		return "\nModel: " + model + ", Speed: " + speed + " Mock" + ", Range: " + range + " Billion Km" + ", Price: $" + price;
 	}
 
-	public void fly() {
-		// TODO Auto-generated method stub
-		
-	}
+//	public void fly() {
+//	    String jetData = this.toString();
+//	    System.out.println(jetData);
+//		
+//	}
 	
 	
 

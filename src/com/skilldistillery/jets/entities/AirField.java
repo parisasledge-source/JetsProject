@@ -6,7 +6,7 @@ public class AirField {
 	private int numJets = 0;
 	private Jet[] jets;
 
-	private static final int MAX_JETS = 10;
+	private static final int MAX_JETS = 5;
 
 	public AirField() {
 		jets = new Jet[MAX_JETS];
