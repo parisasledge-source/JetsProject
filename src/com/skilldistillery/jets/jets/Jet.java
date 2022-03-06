@@ -4,17 +4,17 @@ public class Jet {
 
 	private String model;
 	private double speed;
-	private double range;
-	private double price;
+	private int range;
+	private long price;
 	
 
 	public Jet() {
 	}
 
-	public Jet(String model, double speed, double d, double price) {
+	public Jet(String model, double speed, int range, long price) {
 		this.model = model;
 		this.speed = speed;
-		this.range = d;
+		this.range = range;
 		this.price = price;
 	}
 
@@ -30,23 +30,23 @@ public class Jet {
 		return speed;
 	}
 
-	public void setSpeed(double d) {
-		this.speed = d;
+	public void setSpeed(double speed) {
+		this.speed = speed;
 	}
 
-	public double getRange() {
+	public int getRange() {
 		return range;
 	}
 
-	public void setRange(double d) {
-		this.range = d;
+	public void setRange(int range) {
+		this.range = range;
 	}
 
-	public double getPrice() {
+	public long getPrice() {
 		return price;
 	}
 
-	public void setPrice(double price) {
+	public void setPrice(long price) {
 		this.price = price;
 	}
 

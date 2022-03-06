@@ -6,13 +6,13 @@ public class JetsApplication {
 
 	public static void main(String[] args) {
 		// Create two Jets and assign fields
-		Jet jet1 = new Jet("UFO1", 7.2, 20.00, 4372965234914.35);
+		Jet jet1 = new Jet("UFO1", 7.2, 20, 4372965234914L);
 
 		Jet jet2 = new Jet();
 		jet2.setModel("UFO2");
 		jet2.setSpeed(9.6);
-		jet2.setRange(24.72);
-		jet2.setPrice(7499999643699.30);
+		jet2.setRange(25);
+		jet2.setPrice(7499999643699L);
 
 		// Have the jets display themselves
 		jet1.displayJet();
