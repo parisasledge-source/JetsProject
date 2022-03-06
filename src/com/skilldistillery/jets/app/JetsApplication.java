@@ -23,7 +23,10 @@ public class JetsApplication {
 		System.out.println(jet2Data);
 		
 		//2. Fly all jets
-		//jet1.fly();
-		//jet2.fly();
+		//Call the fly() method on the entire fleet of jets.
+		//System.out.println("");
+		jet1.fly();
+		jet2.fly();
+
 	}
 }

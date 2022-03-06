@@ -52,15 +52,23 @@ public class Jet {
 
 	@Override
 	public String toString() {
-		return "\nModel: " + model + ", Speed: " + speed + " Mock" + ", Range: " + range + " Billion Km" + ", Price: $" + price;
+		return "\nModel: " + model + ", Speed: " + speed + " Mock" 
+	+ ", Range: " + range + " Billion Km" + ", Price: $" + price;
 	}
 
-//	public void fly() {
-//	    String jetData = this.toString();
-//	    System.out.println(jetData);
-//		
-//	}
-	
-	
-
+	public void fly() {
+		/*
+		 * Print out the jet details 
+		 * and the amount of time the jet can fly 
+		 * until it runs out of fuel 
+		 * (based on speed and range).
+		 */
+	    String jetData = this.toString();
+	    System.out.println(jetData);
+	    //(Math.round (getRange() / getSpeed() *100)) / 100.0
+		double jetTime = (Math.round (getRange() / getSpeed() *100)) / 100.0;
+		System.out.println("\nThe amount of time this jet can fly "
+				+ "until it runs out of fuel "
+				+ "(based on speed and range): \n" + jetTime + " hours");	
+	}
 }
