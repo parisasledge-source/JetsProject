@@ -15,8 +15,8 @@ public class JetsApplication {
 		jet2.setPrice(7499999643699L);
 
 		// Have the jets display themselves
-		jet1.displayJet();
-		jet2.displayJet();
+		jet1.fly();
+		jet2.fly();
 
 		String jet1Data = jet1.toString();
 		String jet2Data = jet2.toString();
