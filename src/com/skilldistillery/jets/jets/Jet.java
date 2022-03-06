@@ -1,6 +1,6 @@
 package com.skilldistillery.jets.jets;
 
-public class Jet {
+public abstract class Jet {
 
 	private String model;
 	private double speed;
