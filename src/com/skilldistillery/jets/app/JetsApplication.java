@@ -1,68 +1,58 @@
 package com.skilldistillery.jets.app;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
+import com.skilldistillery.jets.entities.AirField;
 import com.skilldistillery.jets.jets.CargoPlane;
 import com.skilldistillery.jets.jets.FighterJet;
 import com.skilldistillery.jets.jets.Jet;
 
 public class JetsApplication {
+	
+	static Scanner sc = new Scanner(System.in);
 
+	private AirField field = new AirField();
+	
 	public static void main(String[] args) {
 
-		BufferedReader bufIn = null;
-		try {
-			bufIn = new BufferedReader(new FileReader("jets.txt"));
-			String line;
-			while ((line = bufIn.readLine()) != null) {
-
-				// System.out.println(line);
-				if (line.contains("UFO1")) {
-					System.out.println(line);
-				}
-			}
-		} catch (IOException e) {
-			System.err.println(e);
-		} finally {
-			if (bufIn != null) {
-				try {
-					bufIn.close();
-				} catch (IOException e) {
-					System.err.println(e);
-				}
-			}
-		}
+	    JetsApplication jet = new JetsApplication();
+	    
+	    //List<Jet> jets = new ArrayList<>(); 
 		
-//		FighterJet fighter1 = new FighterJet("", 0.0, 0, 00000, 0, 0);
-//		CargoPlane cargo1 = new CargoPlane("", 0.0, 0, 00000, "", 0.0);
-
-		// Create two Jets and assign fields
-		Jet jet1 = new FighterJet("UFO1", 8.4, 122069, 4372965234914L, 0, 0);
-		Jet jet2 = new CargoPlane("UFO2", 6.5, 182500, 7499999643699L, "", 0.0);
-	
-
-		// 1. List fleet
-		System.out.println("\n");
-		System.out.println("List of the fleet: ");
-		System.out.println("===================");
-		String jet1Data = jet1.toString();
-		String jet2Data = jet2.toString();
-		System.out.println(jet1Data);
-		System.out.println(jet2Data);
-
-		// 2. Fly all jets
-		// Call the fly() method on the entire fleet of jets.
-		System.out.println("\n");
-		System.out.println("                  All jets' details ");
-		System.out.println("                         and");
-		System.out.println("the amount of time the jet can fly until it runs out of fuel. ");
-		System.out.println("==============================================================");
-		jet1.fly();
-		jet2.fly();
-
-		// 3. View fastest jet
-
+	    jet.launch();
 	}
+	
+	private void launch() {
+		//field = new AirField();
+		menu();
+	}
+
+	private void menu() {
+		
+		boolean menu = true;
+		String fileName = "";
+		int menuInput = 0;
+		//List<Jet> jets = null;
+		
+		//Prompt the user to choose from the menu.
+		/*
+		 * System.out.println("\n"); System.out.println("Please choose :");
+		 * System.out.println("============================================");
+		 * System.out.println("1: List all Fleet.");
+		 * 
+		 * 
+		 * menuInput = sc.nextInt();
+		 * 
+		 * if (menuInput == 1) {
+		 * 
+		 * //List of all existing food trucks. System.out.println("\n");
+		 * System.out.println("List of Fleet: ");
+		 * System.out.println("================================="); menuInput =
+		 * sc.nextInt(); field.printFleet(); }
+		 */
+		
+	}
+	
 }
