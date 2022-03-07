@@ -1,6 +1,6 @@
 package com.skilldistillery.jets.jets;
 
-public class FighterJet extends Jet{
+public class FighterJet extends Jet implements CombatReady{
 	
 	int weapons = 0;
 	int figthers = 0;

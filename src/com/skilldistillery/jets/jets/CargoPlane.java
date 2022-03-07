@@ -1,6 +1,6 @@
 package com.skilldistillery.jets.jets;
 
-public class CargoPlane extends Jet{
+public class CargoPlane extends Jet implements CargoCarrier{
 	
 	String loadType = "";
 	double loadWeight = 0.0;
