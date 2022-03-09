@@ -73,7 +73,7 @@ public class AirField {
 					"\nModel: " + jets.get(i).getModel() + ", Speed: " + jets.get(i).getSpeed() + " Light Speed"
 							+ ", Range: " + jets.get(i).getRange() + " Light Years" + ", Price: $" + jets.get(i).getPrice());
 
-			double jTime = (Math.round(jets.get(i).getRange() / jets.get(i).getSpeed() * 100)) / 100.0;
+			double jTime = (Math.round(jets.get(i).getRange() / jets.get(i).getSpeed() * 100000)) / 100000.0;
 			System.out.println("\nThe amount of time this jet can fly " + "until it runs out of fuel "
 					+ "(based on speed and range): \n" + jTime + " hours");
 		}
@@ -198,7 +198,7 @@ public class AirField {
 		System.out.println("\n");
 		System.out.println("Please choose a number to remove the jet from the fleet: ");
 		System.out.println("=========================================================");
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 17; i++) {
 
 			System.out.println((i + 1) + ": " + jets.get(i).getModel());
 		}
