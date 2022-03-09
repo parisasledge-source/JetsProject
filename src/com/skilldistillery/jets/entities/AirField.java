@@ -32,7 +32,7 @@ public class AirField {
 				while ((line = bufIn.readLine()) != null) {
 					String[] jetRecord = line.split(",");
 					String model = jetRecord[1];
-					double speed = (Double.parseDouble(jetRecord[2])) * 761.2;// 1 Mach (M) = 761.2 miles per hour (mph)
+					double speed = (Double.parseDouble(jetRecord[2]));
 					int range = Integer.parseInt(jetRecord[3]);
 					long price = Long.parseLong(jetRecord[4]);
 
@@ -70,8 +70,8 @@ public class AirField {
 
 		for (int i = 0; i < jets.size(); i++) {
 			System.out.println(
-					"\nModel: " + jets.get(i).getModel() + ", Speed: " + jets.get(i).getSpeed() + " Miles Per Hour"
-							+ ", Range: " + jets.get(i).getRange() + " Miles" + ", Price: $" + jets.get(i).getPrice());
+					"\nModel: " + jets.get(i).getModel() + ", Speed: " + jets.get(i).getSpeed() + " Light Speed"
+							+ ", Range: " + jets.get(i).getRange() + " Light Years" + ", Price: $" + jets.get(i).getPrice());
 
 			double jTime = (Math.round(jets.get(i).getRange() / jets.get(i).getSpeed() * 100)) / 100.0;
 			System.out.println("\nThe amount of time this jet can fly " + "until it runs out of fuel "
@@ -98,7 +98,7 @@ public class AirField {
 				+ " mph) is the fastest jet of the fleet.");
 		System.out.println("\nDetails: ");
 		System.out.println("\nModel: " + jets.get(fastID).getModel() + ", Speed: " + jets.get(fastID).getSpeed()
-				+ " Miles Per Hour" + ", Range: " + jets.get(fastID).getRange() + " Miles" + ", Price: $"
+				+ " Light Speed" + ", Range: " + jets.get(fastID).getRange() + " Light Years" + ", Price: $"
 				+ jets.get(fastID).getPrice());
 
 	}
@@ -118,11 +118,11 @@ public class AirField {
 		}
 
 		System.out.println("\n" + jets.get(longestRangeID).getModel() + " (" + jets.get(longestRangeID).getRange()
-				+ " miles range) is the longest range jet of the fleet.");
+				+ " light years range) is the longest range jet of the fleet.");
 		System.out.println("\nDetails: ");
 		System.out.println("\nModel: " + jets.get(longestRangeID).getModel() + ", Speed: "
-				+ jets.get(longestRangeID).getSpeed() + " Miles Per Hour" + ", Range: "
-				+ jets.get(longestRangeID).getRange() + " Miles" + ", Price: $" + jets.get(longestRangeID).getPrice());
+				+ jets.get(longestRangeID).getSpeed() + " Light Speed" + ", Range: "
+				+ jets.get(longestRangeID).getRange() + " Light Years" + ", Price: $" + jets.get(longestRangeID).getPrice());
 
 	}
 
@@ -187,8 +187,8 @@ public class AirField {
 		System.out.println("\nThe new list of fleet of jets: ");
 		for (int i = 0; i < jets.size(); i++) {
 			System.out.println(
-					"\nModel: " + jets.get(i).getModel() + ", Speed: " + jets.get(i).getSpeed() + " Miles Per Hour"
-							+ ", Range: " + jets.get(i).getRange() + " Miles" + ", Price: $" + jets.get(i).getPrice());
+					"\nModel: " + jets.get(i).getModel() + ", Speed: " + jets.get(i).getSpeed() + " Light Speed"
+							+ ", Range: " + jets.get(i).getRange() + " Light Years" + ", Price: $" + jets.get(i).getPrice());
 		}
 
 	}
@@ -210,8 +210,8 @@ public class AirField {
 		System.out.println("\nThe new list of fleet of jets: ");
 		for (int i = 0; i < jets.size(); i++) {
 			System.out.println(
-					"\nModel: " + jets.get(i).getModel() + ", Speed: " + jets.get(i).getSpeed() + " Miles Per Hour"
-							+ ", Range: " + jets.get(i).getRange() + " Miles" + ", Price: $" + jets.get(i).getPrice());
+					"\nModel: " + jets.get(i).getModel() + ", Speed: " + jets.get(i).getSpeed() + " Light Speed"
+							+ ", Range: " + jets.get(i).getRange() + " Light Years" + ", Price: $" + jets.get(i).getPrice());
 		}
 
 	}

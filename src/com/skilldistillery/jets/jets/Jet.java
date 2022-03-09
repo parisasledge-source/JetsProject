@@ -52,8 +52,8 @@ public abstract class Jet {
 
 	@Override
 	public String toString() {
-		return "\nModel: " + model + ", Speed: " + speed + " Miles Per Hour" 
-	+ ", Range: " + range + " Miles" + ", Price: $" + price;
+		return "\nModel: " + model + ", Speed: " + speed + " Light Speed" 
+	+ ", Range: " + range + " Light Years" + ", Price: $" + price;
 	}
 
 	public void fly() {
@@ -66,9 +66,8 @@ public abstract class Jet {
 	    String jetData = this.toString();
 	    System.out.println(jetData);
 	    
-	    //Convert the speed from Mach to miles per hour
-	    //1 Mach (M) = 761.2 miles per hour (mph)
-	    double speed = getSpeed() * 761.2;
+
+	    double speed = getSpeed();
 	    double jetTime = (Math.round (getRange() / speed *100)) / 100.0;
 	    
 		System.out.println("\nThe amount of time this jet can fly "
