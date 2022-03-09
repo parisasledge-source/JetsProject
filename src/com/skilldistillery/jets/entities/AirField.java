@@ -3,7 +3,6 @@ package com.skilldistillery.jets.entities;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -14,7 +13,7 @@ import com.skilldistillery.jets.jets.Jet;
 import com.skilldistillery.jets.jets.PassengerPlane;
 
 public class AirField {
-	
+
 	static Scanner sc = new Scanner(System.in);
 
 	public AirField() {
@@ -57,18 +56,18 @@ public class AirField {
 
 	}
 
-	//Print out the model, speed, range, and price of each jet. 
+	// Print out the model, speed, range, and price of each jet.
 	public void listFleet() {
-		
+
 		for (Jet j : jets) {
 			System.out.println(j);
 		}
 	}
 
-	//Print out the jet details and the amount of time the jet can fly until it
-	//runs out of fuel (based on speed and range).
+	// Print out the jet details and the amount of time the jet can fly until it
+	// runs out of fuel (based on speed and range).
 	public void flyAllJets() {
-		
+
 		for (int i = 0; i < jets.size(); i++) {
 			System.out.println(
 					"\nModel: " + jets.get(i).getModel() + ", Speed: " + jets.get(i).getSpeed() + " Miles Per Hour"
@@ -81,7 +80,7 @@ public class AirField {
 
 	}
 
-	//View fastest jet and print out all of the information about a jet.
+	// View fastest jet and print out all of the information about a jet.
 	public void viewFastestJet() {
 		double temp = 0;
 		int fastID = 0;
@@ -94,58 +93,95 @@ public class AirField {
 				fastID = i;
 			}
 		}
-		
-		System.out.println("\n" + jets.get(fastID).getModel() + " (" + jets.get(fastID).getSpeed() + " mph) is the fastest jet of the fleet.");
+
+		System.out.println("\n" + jets.get(fastID).getModel() + " (" + jets.get(fastID).getSpeed()
+				+ " mph) is the fastest jet of the fleet.");
 		System.out.println("\nDetails: ");
-		System.out.println(
-				"\nModel: " + jets.get(fastID).getModel() + ", Speed: " + jets.get(fastID).getSpeed() + " Miles Per Hour"
-						+ ", Range: " + jets.get(fastID).getRange() + " Miles" + ", Price: $" + jets.get(fastID).getPrice());
+		System.out.println("\nModel: " + jets.get(fastID).getModel() + ", Speed: " + jets.get(fastID).getSpeed()
+				+ " Miles Per Hour" + ", Range: " + jets.get(fastID).getRange() + " Miles" + ", Price: $"
+				+ jets.get(fastID).getPrice());
 
 	}
 
-	//View longest range and print out all of the information about a jet.
+	// View longest range and print out all of the information about a jet.
 	public void viewLongestRange() {
 		double temp = 0;
 		int longestRangeID = 0;
 		for (int i = 0; i < jets.size(); i++) {
-			
+
 			if (jets.get(i).getRange() > temp) {
 				// swap elements
 				temp = jets.get(i).getRange();
-				
+
 				longestRangeID = i;
 			}
 		}
-		
-		System.out.println("\n" + jets.get(longestRangeID).getModel() + " (" + jets.get(longestRangeID).getRange() + " miles range) is the longest range jet of the fleet.");
+
+		System.out.println("\n" + jets.get(longestRangeID).getModel() + " (" + jets.get(longestRangeID).getRange()
+				+ " miles range) is the longest range jet of the fleet.");
 		System.out.println("\nDetails: ");
-		System.out.println(
-				"\nModel: " + jets.get(longestRangeID).getModel() + ", Speed: " + jets.get(longestRangeID).getSpeed() + " Miles Per Hour"
-						+ ", Range: " + jets.get(longestRangeID).getRange() + " Miles" + ", Price: $" + jets.get(longestRangeID).getPrice());
-		
+		System.out.println("\nModel: " + jets.get(longestRangeID).getModel() + ", Speed: "
+				+ jets.get(longestRangeID).getSpeed() + " Miles Per Hour" + ", Range: "
+				+ jets.get(longestRangeID).getRange() + " Miles" + ", Price: $" + jets.get(longestRangeID).getPrice());
+
 	}
-	
+
+	public void addJetToFleet() {
+
+		System.out.println("\n");
+		System.out.println("What type of jet are you adding? ");
+		System.out.println("Enter F for Fighter, C for Cargo, P for Passenger");
+		String typeInput = sc.next();
+		System.out.println("What is the model of your jet? ");
+		String modelInput = sc.next();
+		System.out.println("What is the speed of your jet? ");
+		double speedInput = sc.nextDouble();
+		System.out.println("What is the range of your jet? ");
+		int rangeInput = sc.nextInt();
+		System.out.println("What is the price of your jet? ");
+		long priceInput = sc.nextLong();
+
+		if (typeInput.equals("F")) {
+			FighterJet j = new FighterJet(modelInput, speedInput, rangeInput, priceInput, 0, 0);
+			jets.add(j);
+		} else if (typeInput.equals("C")) {
+			CargoPlane j = new CargoPlane(modelInput, speedInput, rangeInput, priceInput, "", 0.0);
+			jets.add(j);
+		} else if (typeInput.equals("P")) {
+			PassengerPlane j = new PassengerPlane(modelInput, speedInput, rangeInput, priceInput, 0);
+			jets.add(j);
+		}
+
+		System.out.println("\nThe new list of fleet of jets: ");
+		for (int i = 0; i < jets.size(); i++) {
+			System.out.println(
+					"\nModel: " + jets.get(i).getModel() + ", Speed: " + jets.get(i).getSpeed() + " Miles Per Hour"
+							+ ", Range: " + jets.get(i).getRange() + " Miles" + ", Price: $" + jets.get(i).getPrice());
+		}
+
+	}
+
 	public void removeJetFromFleet() {
-		
+
 		System.out.println("\n");
 		System.out.println("Please choose a number to remove the jet from the fleet: ");
 		System.out.println("=========================================================");
 		for (int i = 0; i < 5; i++) {
-			
+
 			System.out.println((i + 1) + ": " + jets.get(i).getModel());
 		}
-		
+
 		int userInput = sc.nextInt();
 
-			jets.remove(userInput - 1);
-			
-			System.out.println("\nThe new list of fleet of jets: ");
-			for (int i = 0; i < jets.size(); i++) {
-				System.out.println(
-						"\nModel: " + jets.get(i).getModel() + ", Speed: " + jets.get(i).getSpeed() + " Miles Per Hour"
-								+ ", Range: " + jets.get(i).getRange() + " Miles" + ", Price: $" + jets.get(i).getPrice());
+		jets.remove(userInput - 1);
+
+		System.out.println("\nThe new list of fleet of jets: ");
+		for (int i = 0; i < jets.size(); i++) {
+			System.out.println(
+					"\nModel: " + jets.get(i).getModel() + ", Speed: " + jets.get(i).getSpeed() + " Miles Per Hour"
+							+ ", Range: " + jets.get(i).getRange() + " Miles" + ", Price: $" + jets.get(i).getPrice());
 		}
-		
+
 	}
 }
 
