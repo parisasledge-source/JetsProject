@@ -1,4 +1,4 @@
-Fighter Jet,Discovery,7903.615922,11,5162040
+Fighter Jet,USS Discovery,7903.615922,11,5162040
 Fighter Jet,USS Enterprise-F,7903.615922,32,7488000
 Fighter Jet,USS Orcus,3048.405203,4,5460000
 Cargo Plane,USS Cayuga,7903.615922,303,4680000

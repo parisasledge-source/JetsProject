@@ -36,7 +36,7 @@ public class AirField {
 					int range = Integer.parseInt(jetRecord[3]);
 					long price = Long.parseLong(jetRecord[4]);
 
-					if (line.contains("Fighter Jet")) {
+					if (line.contains("Fighter Jet" )) {
 						FighterJet j = new FighterJet(model, speed, range, price, 0, 0);
 						jets.add(j);
 					} else if (line.contains("Cargo Plane")) {

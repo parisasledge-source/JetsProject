@@ -41,3 +41,28 @@ Proper use of "BufferedReader - FileReader" to read from an existing text file a
 6. BufferedReader - FileReader
 
 7. try - catch
+
+
+### References:
+
+My references for my special input of USS Starships are as followed:
+
+https://uss-theurgy.com/w/index.php?title=Warp_Factor
+
+https://memory-beta.fandom.com/wiki/Nebula_class
+https://uss-theurgy.com/w/index.php?title=USS_Enterprise-F
+https://uss-theurgy.com/w/index.php?title=USS_Orcus
+https://uss-theurgy.com/w/index.php?title=USS_Cayuga
+https://uss-theurgy.com/w/index.php?title=USS_Harbinger
+https://uss-theurgy.com/w/index.php?title=USS_Resolve
+https://uss-theurgy.com/w/index.php?title=USS_Theurgy
+https://uss-theurgy.com/w/index.php?title=USS_Allegiant_NX-80978
+https://uss-theurgy.com/w/index.php?title=SS_Sabine_NX-59846
+https://uss-theurgy.com/w/index.php?title=USS_Ganymede
+https://uss-theurgy.com/w/index.php?title=USS_Poseidon
+https://uss-theurgy.com/w/index.php?title=USS_Niger
+https://uss-theurgy.com/w/index.php?title=USS_Odyssey_(NX-74699)
+https://uss-theurgy.com/w/index.php?title=USS_Oneida
+https://uss-theurgy.com/w/index.php?title=USS_Archeron
+https://uss-theurgy.com/w/index.php?title=USS_Renaissance
+https://uss-theurgy.com/w/index.php?title=The_Versant
