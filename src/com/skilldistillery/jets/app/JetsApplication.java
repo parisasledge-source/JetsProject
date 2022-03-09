@@ -28,8 +28,8 @@ public class JetsApplication {
 			
 			//Prompt the user to choose from the menu.
 			System.out.println("\n");
-			System.out.println("Please choose between 1 to 10 from the menu:--make sure to enter twice after each input entry");
-			System.out.println("==============================================================================================");
+			System.out.println("Please choose between 1 to 10 from the menu:--make sure click on enter key twice or more after each input entry");
+			System.out.println("===============================================================================================================");
 			System.out.println(" 1: List fleet");
 			System.out.println(" 2: Fly all jets");
 			System.out.println(" 3: View fastest jet");
