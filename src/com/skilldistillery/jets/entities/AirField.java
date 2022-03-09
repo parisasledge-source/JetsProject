@@ -101,6 +101,26 @@ public class AirField {
 	}
 
 	//View longest range and print out all of the information about a jet.
+	public void viewLongestRange() {
+		double temp = 0;
+		int longestRangeID = 0;
+		for (int i = 0; i < jets.size(); i++) {
+			
+			if (jets.get(i).getRange() > temp) {
+				// swap elements
+				temp = jets.get(i).getRange();
+				
+				longestRangeID = i;
+			}
+		}
+		
+		System.out.println("\n" + jets.get(longestRangeID).getModel() + " (" + jets.get(longestRangeID).getRange() + " miles range) is the longest range jet of the fleet.");
+		System.out.println("\nDetails: ");
+		System.out.println(
+				"\nModel: " + jets.get(longestRangeID).getModel() + ", Speed: " + jets.get(longestRangeID).getSpeed() + " Miles Per Hour"
+						+ ", Range: " + jets.get(longestRangeID).getRange() + " Miles" + ", Price: $" + jets.get(longestRangeID).getPrice());
+		
+	}
 }
 
 
