@@ -3,6 +3,7 @@ package com.skilldistillery.jets.entities;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,22 +54,22 @@ public class AirField {
 
 	}
 
+	//Print out the model, speed, range, and price of each jet. 
 	public void listFleet() {
+		
 		for (Jet j : jets) {
 			System.out.println(j);
 		}
 	}
 
+	//Print out the jet details and the amount of time the jet can fly until it
+	//runs out of fuel (based on speed and range).
 	public void flyAllJets() {
-		/*
-		 * Print out the jet details and the amount of time the jet can fly until it
-		 * runs out of fuel (based on speed and range).
-		 */
+		
 		for (int i = 0; i < jets.size(); i++) {
 			System.out.println(
-					"\nModel: " + jets.get(i).getModel() + ", Speed: " + jets.get(i).getSpeed() 
-					+ " Miles Per Hour" + ", Range: " + jets.get(i).getRange() + " Miles" 
-							+ ", Price: $" + jets.get(i).getPrice());
+					"\nModel: " + jets.get(i).getModel() + ", Speed: " + jets.get(i).getSpeed() + " Miles Per Hour"
+							+ ", Range: " + jets.get(i).getRange() + " Miles" + ", Price: $" + jets.get(i).getPrice());
 
 			double jTime = (Math.round(jets.get(i).getRange() / jets.get(i).getSpeed() * 100)) / 100.0;
 			System.out.println("\nThe amount of time this jet can fly " + "until it runs out of fuel "
@@ -77,4 +78,30 @@ public class AirField {
 
 	}
 
+	//View fastest jet and print out all of the information about a jet.
+	public void viewFastestJet() {
+		double temp = 0;
+		int fastID = 0;
+		for (int i = 0; i < jets.size(); i++) {
+
+			if (jets.get(i).getSpeed() > temp) {
+				// swap elements
+				temp = jets.get(i).getSpeed();
+
+				fastID = i;
+			}
+		}
+		
+		System.out.println("\n" + jets.get(fastID).getModel() + " (" + jets.get(fastID).getSpeed() + " mph) is the fastest jet of the fleet.");
+		System.out.println("\nDetails: ");
+		System.out.println(
+				"\nModel: " + jets.get(fastID).getModel() + ", Speed: " + jets.get(fastID).getSpeed() + " Miles Per Hour"
+						+ ", Range: " + jets.get(fastID).getRange() + " Miles" + ", Price: $" + jets.get(fastID).getPrice());
+
+	}
+
+	//View longest range and print out all of the information about a jet.
 }
+
+
+
