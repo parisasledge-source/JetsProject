@@ -48,6 +48,7 @@ public class JetsApplication {
 		field.flyAllJets();
 		field.viewFastestJet();
 		field.viewLongestRange();
+		field.removeJetFromFleet();
 	}
 	
 }

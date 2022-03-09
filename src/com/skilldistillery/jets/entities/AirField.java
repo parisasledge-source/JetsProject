@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import com.skilldistillery.jets.jets.CargoPlane;
 import com.skilldistillery.jets.jets.FighterJet;
@@ -13,6 +14,8 @@ import com.skilldistillery.jets.jets.Jet;
 import com.skilldistillery.jets.jets.PassengerPlane;
 
 public class AirField {
+	
+	static Scanner sc = new Scanner(System.in);
 
 	public AirField() {
 		this.airField(fileName);
@@ -119,6 +122,29 @@ public class AirField {
 		System.out.println(
 				"\nModel: " + jets.get(longestRangeID).getModel() + ", Speed: " + jets.get(longestRangeID).getSpeed() + " Miles Per Hour"
 						+ ", Range: " + jets.get(longestRangeID).getRange() + " Miles" + ", Price: $" + jets.get(longestRangeID).getPrice());
+		
+	}
+	
+	public void removeJetFromFleet() {
+		
+		System.out.println("\n");
+		System.out.println("Please choose a number to remove the jet from the fleet: ");
+		System.out.println("=========================================================");
+		for (int i = 0; i < 5; i++) {
+			
+			System.out.println((i + 1) + ": " + jets.get(i).getModel());
+		}
+		
+		int userInput = sc.nextInt();
+
+			jets.remove(userInput - 1);
+			
+			System.out.println("\nThe new list of fleet of jets: ");
+			for (int i = 0; i < jets.size(); i++) {
+				System.out.println(
+						"\nModel: " + jets.get(i).getModel() + ", Speed: " + jets.get(i).getSpeed() + " Miles Per Hour"
+								+ ", Range: " + jets.get(i).getRange() + " Miles" + ", Price: $" + jets.get(i).getPrice());
+		}
 		
 	}
 }
