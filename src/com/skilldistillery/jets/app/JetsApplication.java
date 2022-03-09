@@ -14,6 +14,7 @@ public class JetsApplication {
 	static Scanner sc = new Scanner(System.in);
 
 	private static AirField field = new AirField();
+	//private static Jet jets = new FighterJet();
 	
 	public static void main(String[] args) {
 
@@ -55,6 +56,7 @@ public class JetsApplication {
 		 */
 		
 		field.listFleet();
+		field.flyAllJets();
 	}
 	
 }
