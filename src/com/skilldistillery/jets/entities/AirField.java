@@ -37,12 +37,12 @@ public class AirField {
 					long price = Long.parseLong(jetRecord[4]);
 					FighterJet j = new FighterJet(model, speed, range, price, 0, 0);
 					jets.add(j);
-					System.out.println("\nFighter Jet: " + j);
+					//System.out.println("\nFighter Jet: " + j);
 					
-					double jetTime = (Math.round (range / speed *100)) / 100.0;
-					System.out.println("\nThe amount of time this jet can fly "
-							+ "until it runs out of fuel "
-							+ "(based on speed and range): \n" + jetTime + " hours");	
+					//double jetTime = (Math.round (range / speed *100)) / 100.0;
+					//System.out.println("\nThe amount of time this jet can fly "
+							//+ "until it runs out of fuel "
+							//+ "(based on speed and range): \n" + jetTime + " hours");	
 				}
 				else if (line.contains("Cargo Plane")) {
 					String model = jetRecord[1];
@@ -51,12 +51,12 @@ public class AirField {
 					long price = Long.parseLong(jetRecord[4]);
 					CargoPlane j = new CargoPlane(model, speed, range, price, "", 0.0);
 					jets.add(j);
-					System.out.println("\nCargo Plane: " + j);
-					
-					double jetTime = (Math.round (range / speed *100)) / 100.0;
-					System.out.println("\nThe amount of time this jet can fly "
-							+ "until it runs out of fuel "
-							+ "(based on speed and range): \n" + jetTime + " hours");	
+//					System.out.println("\nCargo Plane: " + j);
+//					
+//					double jetTime = (Math.round (range / speed *100)) / 100.0;
+//					System.out.println("\nThe amount of time this jet can fly "
+//							+ "until it runs out of fuel "
+//							+ "(based on speed and range): \n" + jetTime + " hours");	
 				}
 				
 				else if (line.contains("Passenger Plane")) {
@@ -66,12 +66,12 @@ public class AirField {
 					long price = Long.parseLong(jetRecord[4]);
 					PassengerPlane j = new PassengerPlane(model, speed, range, price, 0);
 					jets.add(j);
-					System.out.println("\nPassenger Plane: " + j);
-					
-					double jetTime = (Math.round (range / speed *100)) / 100.0;
-					System.out.println("\nThe amount of time this jet can fly "
-							+ "until it runs out of fuel "
-							+ "(based on speed and range): \n" + jetTime + " hours");	
+//					System.out.println("\nPassenger Plane: " + j);
+//					
+//					double jetTime = (Math.round (range / speed *100)) / 100.0;
+//					System.out.println("\nThe amount of time this jet can fly "
+//							+ "until it runs out of fuel "
+//							+ "(based on speed and range): \n" + jetTime + " hours");	
 				}
 				
 
@@ -86,16 +86,16 @@ public class AirField {
 
 	}
 	
-	public void printFleet() {
+	public void listFleet() {
 		for (Jet j: jets) {
 			System.out.println(j);
 		}
 	}
 	
-	public List<Jet> list(){
-		List<Jet> output = jets;
-		return output;
-		
-	}
+//	public List<Jet> list(){
+//		List<Jet> output = jets;
+//		return output;
+//		
+//	}
 	
 }

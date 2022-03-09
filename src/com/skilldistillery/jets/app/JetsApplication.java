@@ -13,7 +13,7 @@ public class JetsApplication {
 	
 	static Scanner sc = new Scanner(System.in);
 
-	private AirField field = new AirField();
+	private static AirField field = new AirField();
 	
 	public static void main(String[] args) {
 
@@ -22,6 +22,7 @@ public class JetsApplication {
 	    //List<Jet> jets = new ArrayList<>(); 
 		
 	    jet.launch();
+	    
 	}
 	
 	private void launch() {
@@ -53,6 +54,7 @@ public class JetsApplication {
 		 * sc.nextInt(); field.printFleet(); }
 		 */
 		
+		field.listFleet();
 	}
 	
 }
