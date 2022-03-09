@@ -32,8 +32,13 @@ public class AirField {
 				while ((line = bufIn.readLine()) != null) {
 					String[] jetRecord = line.split(",");
 					String model = jetRecord[1];
+					
+					//speed based on light Speed and in the format of double
 					double speed = (Double.parseDouble(jetRecord[2]));
+					
+					//range based on Light Years and in the format of integer
 					int range = Integer.parseInt(jetRecord[3]);
+					
 					long price = Long.parseLong(jetRecord[4]);
 
 					if (line.contains("Fighter Jet" )) {
@@ -69,11 +74,20 @@ public class AirField {
 	public void flyAllJets() {
 
 		for (int i = 0; i < jets.size(); i++) {
+			
 			System.out.println(
 					"\nModel: " + jets.get(i).getModel() + ", Speed: " + jets.get(i).getSpeed() + " Light Speed"
 							+ ", Range: " + jets.get(i).getRange() + " Light Years" + ", Price: $" + jets.get(i).getPrice());
 
-			double jTime = (Math.round(jets.get(i).getRange() / jets.get(i).getSpeed() * 100000)) / 100000.0;
+			//Convert the speed from Light Speed to Miles per Hour
+			//1 Light Speed (LS) = 1079252848.8 Miles per Hour (MPH)
+			double speedMPH = jets.get(i).getSpeed() * 1079252848.8;
+			
+			//Convert the range from Light Years to Miles 
+			//1 Light Years (LY) = 9460730472580 Miles (M)
+			double rangeM =  (double) (((jets.get(i).getRange() * 9460730472580.00 * 100)) / 100.0);
+			
+			double jTime = (Math.round(rangeM / speedMPH * 100)) / 100.0;
 			System.out.println("\nThe amount of time this jet can fly " + "until it runs out of fuel "
 					+ "(based on speed and range): \n" + jTime + " hours");
 		}

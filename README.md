@@ -48,7 +48,6 @@ Proper use of "BufferedReader - FileReader" to read from an existing text file a
 My references for my special input of USS Starships are as followed:
 
 https://uss-theurgy.com/w/index.php?title=Warp_Factor
-https://memory-beta.fandom.com/wiki/Nebula_class
 https://uss-theurgy.com/w/index.php?title=USS_Enterprise-F
 https://uss-theurgy.com/w/index.php?title=USS_Orcus
 https://uss-theurgy.com/w/index.php?title=USS_Cayuga
