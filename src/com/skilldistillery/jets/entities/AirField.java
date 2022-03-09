@@ -126,6 +126,38 @@ public class AirField {
 
 	}
 
+	public void loadAllCargoJets() {
+
+		for (Jet j : jets) {
+			if (j instanceof CargoPlane) {
+				((CargoPlane) j).loadCargo();
+
+			}
+		}
+	}
+
+	public void Dogfight() {
+
+		for (Jet j : jets) {
+			if (j instanceof FighterJet) {
+				((FighterJet) j).fight();
+
+			}
+		}
+	}
+	
+	public void rescueMission() {
+		
+		for (Jet j : jets) {
+			if (j instanceof PassengerPlane) {
+				((PassengerPlane) j).rescueAllCivilians();
+				
+			}
+		}
+	}
+	
+	
+
 	public void addJetToFleet() {
 
 		System.out.println("\n");
@@ -183,6 +215,7 @@ public class AirField {
 		}
 
 	}
+
 }
 
 

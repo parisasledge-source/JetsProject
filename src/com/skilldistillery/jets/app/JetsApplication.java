@@ -43,13 +43,17 @@ public class JetsApplication {
 		 * System.out.println("================================="); menuInput =
 		 * sc.nextInt(); field.printFleet(); }
 		 */
+		
 
 		field.listFleet();
 		field.flyAllJets();
 		field.viewFastestJet();
 		field.viewLongestRange();
-		field.addJetToFleet();
+		field.loadAllCargoJets();
+		field.Dogfight();
+		field.rescueMission();
 		field.removeJetFromFleet();
+		field.addJetToFleet();
 	}
 
 }

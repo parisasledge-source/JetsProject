@@ -16,6 +16,12 @@ public class PassengerPlane extends Jet {
 	public void setPassengersCapacity(int passengersCapacity) {
 		this.passengersCapacity = passengersCapacity;
 	}
+	
+	public void rescueAllCivilians() {
+		
+		System.out.println("\nPassenger Carrier " + getModel() + ", Get ready! \nTransfer all civilians to a safe place... ");
+		
+	}
 
 //	@Override
 //	public String toString() {

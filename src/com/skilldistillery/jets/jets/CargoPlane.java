@@ -29,6 +29,8 @@ public class CargoPlane extends Jet implements CargoCarrier{
 	
 	public void loadCargo(){
 		
+		System.out.println("\nCargo Carrier " + getModel() + ", Load up! \nThere is a shortage of supply... ");
+		
 	}
 	
 //	@Override
